@@ -1,0 +1,44 @@
+<%- include('./partials/header'); -%>
+
+<main>
+    <div class='ui segment'>
+        <center>
+            <h1>This is a list of all uploaded Videos</h1>
+        </center>
+
+    </div>
+    <div class=" container">
+        <div class="ui grid">
+            <% videos.forEach(function(video){ %>
+            <div class="four wide column">
+                <div class="ui card">
+                    <div class="content container">
+                        <div class="ui image">
+                            <!-- <iframe src="<%=video.videoUrl %>" frameborder="0"></iframe> -->
+                            <video width='240' height='260' controls>
+                                <source src=<%=video.videoUrl %> type="video/mp4">
+                                <!-- <source src="\public\uploads\1695992681594-Jules (2023) (NetNaija.com).mkv"  type="video/mp4"> -->
+                                <!-- WebM video format (VP8 codec) -->
+                                <source src="<%= video.videoUrl %>" type="video/webm">
+                                <!-- Ogg video format (Theora codec) -->
+                                <source src="<%= video.videoUrl %>" type="video/ogg">this file is not supported on your browser 
+                            </video>
+                        </div>
+                        <a class=" ui header" href="/video/<%= video._id %>"><h3 class="breake"><%= video.name %></h3></a>
+                        <div class="meta">
+                            <span class="date"><%= video.date %></span>
+                        </div>
+                        <div class="description">
+                            <p><%= video.description %></p><%=video.video %>
+                            <!-- <%=video.videoUrl %> -->
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <% }); %>
+        </div>
+</main>
+<footer>
+    <%- include('./partials/footer'); -%>
+</footer>

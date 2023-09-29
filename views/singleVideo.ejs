@@ -1,0 +1,23 @@
+<%- include('./partials/header'); -%>
+
+<main>
+    <div class='ui segment'>
+        <center>
+            <h1>Title:<%=video.name%></h1>
+        </center>
+    </div>
+    <div>
+        <center>
+            <video  width="650" height="350" controls>
+                <source src="<%=video.videoUrl %>" type="video/mp4">
+            </video>
+            <div style="display: flex; align-items: center; justify-content: center;">
+                <h2>Description:</h2>
+                <p style=" padding: 2px 3px 15px;"><%=video.description%></p>
+            </div>
+        </center>
+    </div>
+</main>
+<footer>
+    <%- include('./partials/footer'); -%>
+</footer>

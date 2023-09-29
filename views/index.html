@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <title>File Storage</title>
+      <link rel="shortcut icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png" type="image/x-icon"/>
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+      <link href="/style.css" rel="stylesheet" type="text/css">
+   </head>
+
+   <body>
+      <div class="container">
+        <h2>HNG X API Project: File Storage Microservice</h2>
+
+        <h3>Usage:</h3>
+        <p>
+          Please Upload a File ...
+        </p>
+        <div class="view">
+          <h4 id="output"></h4>
+          <form enctype="multipart/form-data" method="POST" action="/api/saveVideo">
+            <input id="inputfield" type="file" name="newFile">
+            <input id="button" type="submit" value="Upload">
+          </form>
+        </div>
+      </div>
+      <div class="footer">
+        <img src="/public/uploads/88b85f66d62c98ef6318db21332dfde8">
+        <video
+          width='640' height='360' controls>
+          <source src="uploads\9db946468ef83b2725a6a7df677e60ae" type="video/mp4" >
+          <!-- <source src="\public\uploads\1695992681594-Jules (2023) (NetNaija.com).mkv"  type="video/mp4">
+           WebM video format (VP8 codec) -->
+          <source src="\public\uploads\1695992681594-Jules (2023) (NetNaija.com).mkv"  type="video/webm">
+          <!-- Ogg video format (Theora codec) -->
+          <source src="\public\uploads\1695992681594-Jules (2023) (NetNaija.com).mkv"  type="video/ogg">this file is not supported on your browser </video> -->
+        <p>&copy
+          by 
+          <a href="http://www.twitter.com/Cazicruz">Dav's dev</a>
+        </p>
+      </div>
+   </body>
+</html>
