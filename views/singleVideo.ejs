@@ -9,7 +9,12 @@
     <div>
         <center>
             <video  width="650" height="350" controls>
-                <source src="<%=video.videoUrl %>" type="video/mp4">
+                <source src=<%=video.videoUrl %> type="video/mp4">
+                <!-- WebM video format (VP8 codec) -->
+                <source src="<%= video.videoUrl %>" type="video/webm">
+                <source src="<%= video.videoUrl %>" type="video/x-matroska">
+                <!-- Ogg video format (Theora codec) -->
+                <source src="<%= video.videoUrl %>" type="video/ogg">
             </video>
             <div style="display: flex; align-items: center; justify-content: center;">
                 <h2>Description:</h2>
